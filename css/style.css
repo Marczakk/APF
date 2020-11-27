@@ -1,0 +1,683 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran|Lato|Roboto&display=swap');
+
+/* font-family: 'Roboto', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Catamaran', sans-serif; */
+
+
+
+html, body{
+    background-color: #fff;
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    text-decoration: none;
+}
+
+
+/* NAV */
+
+.nav{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 0 25px;
+    
+}
+
+.nav.sticky{
+    padding: 5px 30px;
+    background-color: #EAEBED;
+
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.9);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    opacity: 1;
+}
+
+.nav.links{
+    margin-right: 40px;
+}
+
+.nav .links a{
+    margin-right: 55px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+.nav h4{
+    font-size: 22px;
+    margin-left: 30px;
+}
+
+
+/* Menu BUtton  */
+
+
+.menu-btn{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 2;
+    display: none;
+}
+
+
+
+
+
+
+/* Banner */
+
+.banner{
+    display: grid;
+    place-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/pexels-wesley-carvalho-3778704.jpg);
+    background-size: cover;
+}
+
+
+.banner::before,
+.banner::after{
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -60px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    transform: skewY(3deg);
+
+}
+
+.contentText{
+    position: relative;
+    bottom: 100px;
+    left: 30px;
+}
+
+.contentText h2{
+    margin-left: 90px;
+}
+
+.contentText p{
+    width: 30%;
+}
+
+.contentText .btn{
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    margin-left: 140px;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: 0.5s ease-in-out;
+}
+
+.contentText .btn:hover{
+    cursor: pointer;
+    color: white;
+    background-color: black;
+}
+
+
+
+
+
+.about{
+    margin-top: 70px;
+    height: 400px;
+    display: flex;
+
+    justify-content: center;
+    padding: 30px 250px;
+
+}
+
+.aboutText{
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutText h3{
+    text-align: center;
+    padding: 10px 1px;
+    background-color: red;
+    border-radius: 100px;
+    font-size: 16px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.aboutText h2{
+    font-size: 18px;
+    text-align: center;
+    border-bottom: 2px solid red;
+    padding-bottom: 10px;
+}
+
+
+.infoCards{
+    margin-top: -180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 0 40px 0 ;
+}
+
+
+.infoCards .card{
+    position: relative;
+    height: 360px;
+    width: 290px;
+    background-color: #fff;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.6);
+    transition: 10s ease-in-out;
+    border-radius: 10px;
+    transition: 5s linear;
+
+}
+
+.infoCards .card:hover{
+    position: relative;
+    bottom: 30px;
+    transition: 10s ease-in-out;
+    cursor: pointer;
+    transition: 5s linear;
+
+}
+
+
+.infoCards .one .cardoneImg{
+    width: 150px;
+    position: absolute;
+    top: -130px;
+    right: -50px;
+    z-index: 0;
+}
+
+
+.infoCards .two .cardtwoImg{
+    width: 150px;
+    position: absolute;
+    top: -100px;
+    right: -50px;
+}
+
+
+.infoCards .three .cardthreeImg{
+    width: 150px;
+    position: absolute;
+    top: -120px;
+    right: -10px;
+}
+
+
+.infoCards .four .cardfourImg{
+    width: 150px;
+    position: absolute;
+    top: -115px;
+    right: -30px;
+}
+
+.cardbgone{
+    height: 150px;
+    background-image: url(../img/quintesence.jpg);
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.cardbgone:hover{
+    
+    cursor: pointer;
+}
+
+.cardbgtwo{
+    height: 150px;
+    background-image: url(../img/Akatsuki.jpg);
+    background-size: cover;
+    border-top-left-radius: 10px;
+}
+
+.cardbgthree{
+    height: 150px;
+    background-image: url(../img/Działeczka.jpg);
+    background-size: cover;
+    background-position: 0.00001vh;
+    border-top-left-radius: 10px;
+}
+
+.cardbgfour{
+    height: 150px;
+    background-image: url(../img/Zawieszony.jpg);
+    background-position: 0.00001vh;
+    background-size: cover;
+    border-top-left-radius: 10px;
+}
+
+
+
+.cardContent{
+    padding: 0 20px;
+
+}
+
+
+.cardContent p{
+    line-height: 30px;
+    opacity: 0.6;
+}
+
+.cardIcon{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 16px;
+}
+
+
+
+
+/* List section */
+
+
+.list{
+    overflow: hidden;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    padding: 50px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #cce7e8;
+}
+
+
+ol{
+    list-style: none;
+}
+
+.listList li{
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+
+li p{
+    width: 70%;
+    position: relative;
+    left: 180px;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 5px;
+    border-bottom: 2px solid black;
+    
+}
+
+.listText h1{
+    position: relative;
+    left: 60px;
+    font-size: 36px;
+    width: 120%;
+    
+}
+
+
+
+.listList h1{
+    position: relative;
+    left: 350px;
+    margin-bottom: 50px;
+    top: 10px;
+}
+
+
+
+/* Pricing */
+
+
+
+.priceSection h1, h3{
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.priceSection h1{
+    font-size: 49px;
+}
+
+
+.pricing-table{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.col{
+    flex: 25%;
+    padding: 20px;
+    margin: 0 50px;
+    max-width: 320px;
+    box-sizing: border-box;
+}
+
+.table{
+    background: #fff;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px #00000070;
+}
+
+.table h2{
+    text-transform: uppercase;
+}
+
+.table ul{
+    margin: 0;
+    padding: 0;
+}
+
+.table ul li{
+    padding: 10px 0;
+    list-style: none;
+}
+
+.price{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.price span{
+    display: block;
+    font-size: 14px;
+}
+
+.table a{
+    text-decoration: none;
+    color: #2c3e50;
+    border: 2px solid #2c3e50;
+    display: block;
+    padding: 10px 0;
+    margin: 10px 0;
+    border-radius: 40px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: 0.5s linear;
+}
+
+.table a:hover{
+    background: #2c3e50;
+    color: #fff;
+}
+
+.pop{
+    background: #2c3e50;
+    color: #fff;
+    transform: rotate(45deg);
+    padding: 10px 40px;
+    position: absolute;
+    top: 16px;
+    right: -34px;
+}
+
+/* App section */
+
+
+.appSection{
+    background-color: #2c3e50;
+    margin-top: 100px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+
+
+}
+
+.appText img{
+    width: 10vw;
+    margin-left: 50px
+}
+
+.firstimg{
+    position: relative;
+    left: 50px;
+    /* margin-left: 150px !important; */
+}
+
+.appImg img{
+    height: 400px;
+}
+
+
+/* Newsletter Section */
+
+
+
+.newsletterSection h1{
+    position: relative;
+    top: 20px;
+    margin-bottom: 40px;
+    font-size: 52px;
+    color: black;
+    text-align: center;
+}
+
+.newsletterSection p{
+    margin-bottom: 40px;
+    color: #b2b2b2;
+    font-size: 28px;
+    text-align: center;
+}
+
+.newsletter{
+    max-width: 550px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+
+
+}
+
+.newsletter .input{
+    width: 100%;
+    padding: 30px 100px 30px 60px;
+    border-radius: 65px;
+    border: none;
+    font-weight: bold;
+    background-color: #2c3e50;
+    outline: none;
+
+}
+
+.newsletter .fas{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    font-size: 20px;
+}
+
+.newsletter .btn{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    background: white;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 25px;
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: black;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+
+
+.footer-container{
+    margin-top: 100px;
+    background-color: #212329;
+    padding-bottom: 4rem;
+}
+
+.footer{
+    width: 80%;
+    height: 40vh;
+    background-color: #212329;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.footer-heading{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4rem;
+}
+
+.footer-heading h2{
+    margin-bottom: 2rem;
+}
+
+.footer-heading a{
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.footer-heading a:hover{
+    color: red;
+    transition: 0.3s ease-out;
+}
+
+.footer-email-form h2{
+    margin-bottom: 2rem;
+}
+
+#footer-email{
+    width: 250px;
+    height: 40px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+#footer-email::placeholder{
+    color: lightgray;
+}
+
+
+#footer-email-btn{
+    width: 100px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #F9423D;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+#footer-email-btn:hover{
+    cursor: pointer;
+    background-color: #337AF1;
+    transition: all 0.4s ease-out;
+}
+
+
+
+
+/* Responsive */
+
+
+
+@media screen and (max-width: 980px){
+    .col{
+        flex: 50%;
+    }
+
+    .card{
+        flex: 50%;
+    }
+}
+
+@media(max-width: 800px){
+
+
+    .col{
+        flex: 100%;
+    }
+
+    .menu-btn{
+        display: block;
+    }
+
+    .menu-btn i:hover{
+        opacity: 0.7;
+        cursor: pointer;
+    }
+
+    .links{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 20px;
+        width: 50%;
+        height: 100vh;
+        background-color: lightskyblue;
+        opacity: 0.9;
+        transform: translateX(-1500px);
+        padding: 30px;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .links.show{
+        transform: translateX(-20px);
+    }
+
+    .links a{
+        padding: 20px;
+        border-bottom: black solid 1px;
+        font-size: 14px;
+    }
+
+}
